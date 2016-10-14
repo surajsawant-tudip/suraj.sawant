@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "file.txt";
+
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        var data = JSON.parse(this.responseText);  //parse the JSON
+        data.push({        //add the employee
+     name:"Mike",
+     lastName:"Rut",
+    });
+   myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<p>"'+ arr[i].name + ' ' + 
+        arr[i].lastname + '"</p><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
+

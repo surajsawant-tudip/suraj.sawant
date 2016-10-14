@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+
+First name:<br>
+  <input type="text" id="i1" name="firstname"><br><br>
+  Last name:<br>
+  <input type="text" id="i2" name="lastname"><br><br>
+
+<button onclick="myCreateFunction()">ADD</button><br><br>
+<button onclick="myDeleteFunction()">DELETE</button><br><br>
+<button onclick="myResetFunction()">RESET</button><br><br>
+
+<table id="myTable">
+  <tr>
+    <td>FIRST NAME</td>
+    <td>LAST NAME</td>
+  </tr>
+ </table>
+<br>
+
+
+
+<script>
+function myCreateFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var x = document.getElementById("i1").value;
+    var y = document.getElementById("i2").value;
+    cell1.innerHTML = x;
+    cell2.innerHTML = y;
+}
+
+function myDeleteFunction() {
+    document.getElementById("myTable").deleteRow(1);
+}
+
+
+function myResetFunction() {
+    location.reload();
+}
+</script>
+
+</body>
+</html>
+

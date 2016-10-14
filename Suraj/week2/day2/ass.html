@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JAVASCRIPT ASSIGNMENT</title>
+
+<script>
+function isEmpty(y) {
+    var x = y.trim();
+    if (x.length == 0 )
+    {
+        alert("TRUE");
+    }
+    else
+    {
+       alert("FALSE");
+    } 
+}
+</script>
+</head>
+<body>
+
+<form name="myForm"  method="post">
+First Name: <input type="text" name="fname">
+<input type="button" onclick="isEmpty(document.forms['myForm']['fname'].value)" value="CHECK FIRST NAME"><br><br>
+
+
+Last Name: <input type="text" name="lname">
+<input type="button" onclick="isEmpty(document.forms['myForm']['lname'].value)" value="CHECK LAST NAME">
+
+
+</form>
+
+<!-- <script>isEmpty("SURAJ");</script> -->
+
+</body>
+</html>
+

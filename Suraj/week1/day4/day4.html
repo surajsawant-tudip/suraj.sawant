@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >THIS IS CSS...
+</title>
+
+</head>
+ <style>
+ <link rel="stylesheet" type="text/css" href="style.css" media="screen"/> 
+    body {background-color: powderblue;}
+    h1 {color: red;}    
+    p {color: blue;}
+  </style>
+
+<body background="C:\Users\TUDIP\Desktop\Suraj\BFF_Mobile2.jpg">
+<h1 style="text-align:center;">WEB FORM</h1>
+
+
+
+<marquee>Welcome <span style=color:blue>to</span> you</marquee>
+ <br>
+ <br>
+ 
+ <!--inline css-->
+  <p style="color:#900;">This is personal information registration form</p>
+ <form action="day1.html" >
+ <fieldset >
+    <legend > Personal Information</legend>
+ <!--internal css-->
+	<style type="text/css">
+    p.special_p
+    {
+            color:#700;
+    }
+</style>
+<p class="special_p centre">First name:</p> 
+  
+  <input type="text" name="firstname"><br>
+   <!--external css-->
+  <link rel="stylesheet" type="text/css" href="mystyle.css" media="screen"/> 
+  <p class="special_e">Last name:</p> <br>
+  <input type="text" name="lastname"><br>
+     <p class="special_e">Email:</p> <br>
+  <input type="email" name="email" placeholder="firstname.lastname@tudip.nl"><br><br>
+  
+   <!--element class-->
+  <div class="special">Gender:</div>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br><br>
+    <!--CSS Selector Id-->
+  <div id="special">Vehicle:</div><br>
+   <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle" value="Car" > I have a car<br><br>
+  
+  <!--Setting the CSS Font-->
+  <p class="special_one">Car:<br>
+   <select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+  <option value="none">None</option>
+</select> </p><br><br>
+  
+  Password:<br>
+  <input type="password" name="password"><br><br>
+  <input type="submit" name="submit"><br><br>
+  <input type="reset" name="reset"><br>
+ 
+ 
+  </fieldset>
+</form> 
+ <center><img src="C:\Users\TUDIP\Desktop\Suraj\BFF_Mobile2.jpg" width="100" height="100"; align="center" ;> </center><br><br>
+  <a href="http://tudip.steersimple.com/issues/34710">This is a link to tudip steersimple</a> <br><br>   
+
+  
+  <ul class="ul a">
+  <li><a>Coffee</a></li>
+  <li><a>Tea</a></li>
+  <li><a>Milk</a></li>
+</ul> 
+ 
+</body>
+</html>

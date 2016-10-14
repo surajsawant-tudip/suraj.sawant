@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title >THIS IS APPLICATION FOR LIKE AND DISLIKE...</title>
+</head>
+<script>
+function prev_value() {
+        document.getElementById("p1").innerHTML =  localStorage.like ;
+	document.getElementById("p2").innerHTML =  localStorage.dislike ;  
+}
+
+
+function count_like() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.like) {
+            localStorage.like = Number(localStorage.like)+1;
+        } else {
+            localStorage.like = 1;
+        }
+        document.getElementById("p1").innerHTML =  localStorage.like ;
+    } else {
+        document.getElementById("p1").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+function count_dislike() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.dislike) {
+            localStorage.dislike = Number(localStorage.dislike)+1;
+        } else {
+            localStorage.dislike = 1;
+        }
+        document.getElementById("p2").innerHTML = localStorage.dislike;
+    } else {
+        document.getElementById("p2").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+<style>
+    body {
+	background-color: powderblue;
+	} 
+    #button1,#p1{
+     position:relative;
+     display:inline;
+     float:left;
+     margin-left:520px;
+     
+}
+#button2{
+     position:relative;
+     display:inline;
+     float:left;
+     margin-left:200px;
+     
+}
+#p2{
+position:relative;
+     display:inline;
+     float:left;
+     margin-left:240px;
+}
+</style>
+
+<body onload="prev_value()">
+	<center><img src="BFF_Mobile2.jpg" width="500" height="500"; align="center" ;> </center>
+  <br><br>
+	<button id="button1" type="button" onclick="count_like()">
+        LIKE</button>
+	<button id="button2" type="button" onclick="count_dislike()">
+        DISLIKE</button><br>
+        <p id="p1"></p>
+        <p id="p2"></p>
+
+
+
+</body>
+</html>
